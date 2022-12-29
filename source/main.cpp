@@ -1,11 +1,24 @@
 #include <iostream>
-#include "person.h"
+#include "../header/person.h"
 
 using namespace std;
 
 int main()
 {
-    Person osoba(94, 'm', 23, 180);
+    int waga;
+    char plec;
+    int wiek;
+    int wzrost;
+
+    cout << "Podaj wage" << endl;
+    cin >> waga;
+    cout << "Podaj plec" << endl;
+    cin >> plec;
+    cout << "Podaj wiek" << endl;
+    cin >> wiek;
+    cout << "Podaj wzrost" << endl;
+    cin >> wzrost;
+    Person osoba(waga, plec, wiek, wzrost);
     osoba.calculate_caloric_needs();
     cout << "Twoje dane:" << endl;
     cout << "Waga:" << osoba.get_weight() << endl;

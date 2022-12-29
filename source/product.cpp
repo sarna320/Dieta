@@ -1,4 +1,4 @@
-#include "product.h"
+#include "../header/product.h"
 
 Product::Product()
 {
