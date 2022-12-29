@@ -3,21 +3,16 @@
 
 using namespace std;
 
+void getDataPerson(int &w, char &p, int &wi, int &wz);
+
 int main()
 {
     int waga;
     char plec;
     int wiek;
     int wzrost;
+    getDataPerson(waga,plec,wiek,wzrost);
 
-    cout << "Podaj wage" << endl;
-    cin >> waga;
-    cout << "Podaj plec" << endl;
-    cin >> plec;
-    cout << "Podaj wiek" << endl;
-    cin >> wiek;
-    cout << "Podaj wzrost" << endl;
-    cin >> wzrost;
     Person osoba(waga, plec, wiek, wzrost);
     osoba.calculate_caloric_needs();
     cout << "Twoje dane:" << endl;
@@ -33,4 +28,17 @@ int main()
     cout << "Bialko: " << osoba.get_protein() << endl;
 
     return 0;
+}
+
+void getDataPerson(int &w, char &p, int &wi, int &wz)
+{
+
+    cout << "Podaj wage" << endl;
+    cin >> w;
+    cout << "Podaj plec" << endl;
+    cin >> p;
+    cout << "Podaj wiek" << endl;
+    cin >> wi;
+    cout << "Podaj wzrost" << endl;
+    cin >> wz;
 }
